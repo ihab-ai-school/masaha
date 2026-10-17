@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="مساحة: رفيقك الصوتي لتفضفض وتصفّي ذهنك">
+  <meta name="theme-color" content="#e6eef7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111a26" media="(prefers-color-scheme: dark)">
+  <title>مساحة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <!-- Welcome -->
+    <section id="welcome" class="screen welcome" aria-labelledby="app-title">
+      <div class="welcome-body">
+        <div class="mark" aria-hidden="true"><span></span></div>
+        <h1 id="app-title">مساحة</h1>
+        <p class="tagline">مساحتك الهادئة لتفضفض وتصفّي ذهنك</p>
+      </div>
+      <button id="start" class="btn-primary" type="button">ابدأ</button>
+    </section>
+
+    <!-- Chat -->
+    <section id="chat" class="screen chat" aria-label="المحادثة" hidden>
+      <header class="chat-header">
+        <span class="brand">مساحة</span>
+        <span id="timer" class="timer" dir="ltr" aria-label="مدة الجلسة">00:00</span>
+      </header>
+
+      <div class="orb-area">
+        <div id="orb" class="orb" data-state="connecting" aria-hidden="true">
+          <span class="halo"></span>
+          <span class="core"></span>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">جارٍ الاتصال…</p>
+      </div>
+
+      <div class="controls">
+        <button id="mute" class="ctrl" type="button" aria-pressed="false">
+          <span class="ctrl-icon" aria-hidden="true">
+            <svg class="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>
+            <svg class="icon-mic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10V6a3 3 0 0 0-5.7-1.3"/><path d="M9 9v2a3 3 0 0 0 4.9 2.3"/><path d="M5 11a7 7 0 0 0 11.4 5.4M19 11a7 7 0 0 1-.6 2.8"/><path d="M12 18v3"/><path d="M3 3l18 18"/></svg>
+          </span>
+          <span id="mute-label" class="ctrl-label">كتم</span>
+        </button>
+
+        <button id="end" class="ctrl ctrl-end" type="button">
+          <span class="ctrl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </span>
+          <span class="ctrl-label">إنهاء</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
